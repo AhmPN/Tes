@@ -64,7 +64,6 @@
   </style>
 </head>
 <body>
-
 <header>
   <h1>SMPN 1 PANGKALAN LADA</h1>
   <h2>Website Kelas IXB</h2>
@@ -89,35 +88,28 @@
 </head>
 <body>
   <div id="waktu"></div>
-
   <script>
     function updateWaktu() {
       const hariNama = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
       const bulanNama = ["Januari","Februari","Maret","April","Mei","Juni",
                          "Juli","Agustus","September","Oktober","November","Desember"];
-
       let sekarang = new Date();
       let hari = hariNama[sekarang.getDay()];
       let tanggal = sekarang.getDate();
       let bulan = bulanNama[sekarang.getMonth()];
       let tahun = sekarang.getFullYear();
-
       let jam = String(sekarang.getHours()).padStart(2, '0');
       let menit = String(sekarang.getMinutes()).padStart(2, '0');
       let detik = String(sekarang.getSeconds()).padStart(2, '0');
-
       document.getElementById("waktu").innerHTML =
         `${hari}, ${tanggal} ${bulan} ${tahun} | ${jam}:${menit}:${detik}`;
     }
-
     setInterval(updateWaktu, 1000);
     updateWaktu();
   </script>
 </body>
 </html>
 </header>
-
-
 <nav>
   <button class="menu-btn" onclick="showContent('pesan')">Tulis Pesan</button>
   <button class="menu-btn" onclick="showContent('struktur')">Struktur Kelas</button>
@@ -129,12 +121,10 @@
   <button class="menu-btn" onclick="showContent('pr')">Tugas / PR</button>
   <button class="menu-btn" onclick="showContent('galeri')">Galeri Foto</button>
 </nav>
-
 <div id="content">
   <h2>Selamat datang di Website Kelas IX-B!</h2>
   <p>Klik di atas untuk melihat informasi penting dan seru seputar kelas kita 😊</p>
 </div>
-
 <footer>
   <p>Website Kelas IXB | Designed by: APutraN</p>
   <p>
